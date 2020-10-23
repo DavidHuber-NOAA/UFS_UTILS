@@ -1,0 +1,27 @@
+#%Module#####################################################
+## emcsfc_snow2mdl build module for S4
+#############################################################
+
+# load intel compiler
+
+module load license_intel/S4
+module load intel/18.0.3
+
+# load ncep library modules
+
+module load emc-hpc-stack
+module load ip/3.3.3
+module load sp/2.3.3
+module load w3nco/2.4.1
+module load bacio/2.4.1
+module load jasper/2.0.15
+module load zlib/1.2.11
+module load png/1.6.35
+module load g2/3.4.1
+module load landsfcutil/2.4.1
+
+export FCOMP=ifort
+#Ivy and S4 partitions
+export FFLAGS="-O0 -march=ivybridge -r8 -i4 -FR -I${IP_INCd} -qopenmp -convert big_endian -assume byterecl"
+#S4 partition only
+#export FFLAGS="-O0 -r8 -i4 -FR -I${IP_INCd} -qopenmp -convert big_endian -assume byterecl"

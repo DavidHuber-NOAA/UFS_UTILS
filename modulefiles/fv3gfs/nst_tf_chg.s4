@@ -1,0 +1,23 @@
+#%Module#####################################################
+## Build module for S4
+#############################################################
+
+# Loading Intel Compiler Suite
+module load license_intel/S4
+module load intel/18.0.3
+
+# Loding nceplibs modules
+module load emc-hpc-stack
+module load w3nco/2.4.1
+module load bacio/2.4.1
+module load nemsio/2.5.2
+module load netcdf/4.7.4
+export NETCDF_INCLUDE="-I${NETCDF_FFLAGS}"
+
+export FCOMP=ifort
+#Ivy and S4 partitions
+export FFLAGS="-O3 -march=ivybridge -fp-model precise -g -r8 -i4"
+# for debugging
+#export FFLAGS="-g -r8 -i4 -warn unused -check bounds"
+#S4 partition only
+#export FFLAGS="-O3 -fp-model precise -g -r8 -i4"
