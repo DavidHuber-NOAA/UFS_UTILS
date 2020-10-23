@@ -5,10 +5,7 @@
 module load license_intel/S4
 module load intel/18.0.3
 export FCOMP=mpiifort
-# Ivy & S4 patitions
 export FFLAGS="-march=ivybridge -O0 -i4"
-# S4 only
-#export FFLAGS="-O0 -i4"
 
 # load ncep library modules
 module load emc-hpc-stack/2020-q3

@@ -112,6 +112,9 @@ elif [[ -d /lustre && -d /ncrc ]] ; then
 elif [[ "$(hostname)" =~ "Orion" ]]; then
     target="orion"
     module purge
+elif [[ "$(hostname)" =~ "s4" ]]; then
+    target="s4"
+    module purge
 elif [[ "$(hostname)" =~ "odin" ]]; then
     target="odin"
 else

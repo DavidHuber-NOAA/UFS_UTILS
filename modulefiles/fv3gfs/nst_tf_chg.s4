@@ -15,9 +15,6 @@ module load netcdf/4.7.4
 export NETCDF_INCLUDE="-I${NETCDF_FFLAGS}"
 
 export FCOMP=ifort
-#Ivy and S4 partitions
 export FFLAGS="-O3 -march=ivybridge -fp-model precise -g -r8 -i4"
 # for debugging
-#export FFLAGS="-g -r8 -i4 -warn unused -check bounds"
-#S4 partition only
-#export FFLAGS="-O3 -fp-model precise -g -r8 -i4"
+#export FFLAGS="-g -march=ivybridge -r8 -i4 -warn unused -check bounds"

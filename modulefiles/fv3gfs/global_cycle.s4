@@ -16,7 +16,4 @@ module load ip/3.3.3
 module load netcdf/4.7.4
 export NETCDF_INCLUDE=${NETCDF_FFLAGS}
 
-#Ivy and S4 partitions
 export FCMP="mpiifort -march=ivybridge"
-#S4 only
-#export FCMP=mpiifort

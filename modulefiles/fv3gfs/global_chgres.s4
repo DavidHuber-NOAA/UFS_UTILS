@@ -25,5 +25,4 @@ export NETCDF_INCLUDE=${NETCDF_FFLAGS}
 
 export FCMP=ifort
 
-#Ivy and S4 partitions
-#export FFLAGS="-march=ivybridge"
+export FFLAGS="-march=ivybridge"

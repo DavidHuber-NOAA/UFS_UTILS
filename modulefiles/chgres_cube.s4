@@ -15,9 +15,6 @@ module load sigio/2.1.0
 module load esmf/8_1_beta_snapshot_27
 
 export FCOMP=mpiifort
-#Ivy & S4 partitions
 export FFLAGS="-O3 -march=ivybridge -fp-model precise -g -traceback -r8 -i4 -qopenmp -convert big_endian -assume byterecl"
 # for debugging
-#export FFLAGS="-O0 -g -traceback -r8 -i4 -qopenmp -convert big_endian -check bounds -warn unused -assume byterecl"
-#S4 partition only
-#export FFLAGS="-O3 -fp-model precise -g -traceback -r8 -i4 -qopenmp -convert big_endian -assume byterecl"
+#export FFLAGS="-O0 -march=ivybridge -g -traceback -r8 -i4 -qopenmp -convert big_endian -check bounds -warn unused -assume byterecl"
