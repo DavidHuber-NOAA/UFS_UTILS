@@ -9,3 +9,4 @@ module load emc-hpc-stack/2020-q3
 module load w3nco/2.4.1
 module load netcdf/4.7.4
 module load hdf5/1.10.6
+module load nco/4.9.3
