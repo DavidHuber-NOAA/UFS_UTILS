@@ -46,7 +46,7 @@ elif [ $machine = "jet" ]; then
 elif [ $machine = "orion" ]; then
     FIX_DIR="/work/noaa/global/glopara/fix_nco_gfsv16"
 elif [ $machine = "s4" ]; then
-    FIX_DIR="/data/prod/fix"
+    FIX_DIR="/data/prod/glopara/fix"
 fi
 cd ${pwd}/../fix                ||exit 8
 for dir in fix_am fix_fv3 fix_orog fix_fv3_gmted2010 fix_sfc_climo; do
