@@ -126,6 +126,10 @@ function (platform_name RETURN_VARIABLE)
 
     set (${RETURN_VARIABLE} "orion" PARENT_SCOPE)
 
+  elseif (SITENAME MATCHES "^s4-submit")
+
+    set (${RETURN_VARIABLE} "s4" PARENT_SCOPE)
+
   elseif (SITENAME MATCHES "^cheyenne1.cheyenne.ucar.edu" OR
       SITENAME MATCHES "^cheyenne1.cheyenne.ucar.edu" OR
       SITENAME MATCHES "^cheyenne2.cheyenne.ucar.edu" OR

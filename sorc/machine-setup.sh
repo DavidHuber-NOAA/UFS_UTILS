@@ -35,6 +35,14 @@ elif [[ -d /scratch1 ]] ; then
     fi
     target=hera
     module purge
+elif [[ -d /data/prod ]] ; then
+    # We are on SSEC S4
+    if ( ! eval module help > /dev/null 2>&1 ) ; then
+        echo load the module command 1>&2
+        source /opt/apps/lmod/lmod/init/$__ms_shell
+    fi
+    target=s4
+    module purge
 elif [[ -d /gpfs/hps && -e /etc/SuSE-release ]] ; then
     # We are on NOAA Luna or Surge
     if ( ! eval module help > /dev/null 2>&1 ) ; then
